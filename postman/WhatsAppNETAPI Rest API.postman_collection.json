@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "dba4d63f-5cf5-4e4d-8338-a6876d2a0fb2",
+		"name": "WhatsAppNETAPI Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sendMessage",
+			"item": [
+				{
+					"name": "sendText",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"contact\": \"081381123456\",\r\n  \"message\": \"tes kirim pesan dari postman\",\r\n  \"type\": \"text\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/sendText",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"sendText"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendImage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"contact\": \"081381123456\",\r\n  \"message\": \"tes kirim pesan plus gambar dari postman\",\r\n  \"type\": \"image\",\r\n  \"attachmentOrUrl\": \"C:\\\\Users\\\\Roedhi\\\\Pictures\\\\wastatus.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/sendImage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"sendImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"contact\": \"081381123456\",\r\n  \"message\": \"tes kirim pesan plus file dari postman\",\r\n  \"type\": \"file\",\r\n  \"attachmentOrUrl\": \"C:\\\\Users\\\\Roedhi\\\\Documents\\\\cetak.pdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/sendFile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"sendFile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendMediaFromUrl",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"contact\": \"081381123456\",\r\n  \"message\": \"tes kirim pesan plus gambar dari postman\",\r\n  \"type\": \"url\",\r\n  \"attachmentOrUrl\": \"http://coding4ever.net/assets/images/avatar.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/sendMediaFromUrl",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"sendMediaFromUrl"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendLocation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"contact\": \"081381123456\",\r\n  \"message\": {\r\n    \"latitude\": \"-7.759866\",\r\n    \"longitude\": \"110.409012\",\r\n    \"description\": \"My office (Univ AMIKOM Yogyakarta)\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/sendLocation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"sendLocation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"contact\": \"081381123456\",\r\n  \"message\": {\r\n    \"title\": \"Menu\",\r\n    \"content\": \"Selamat datang, silahkan pilih menu yang tersedia.\",\r\n    \"listText\": \"Pilih Menu\",\r\n    \"sections\": [\r\n      {\r\n        \"title\": \"Daftar Menu\",\r\n        \"rows\": [\r\n          {\r\n            \"title\": \"Berzakat\",\r\n            \"description\": \"Zakal maal, zakat fitrah, dll\"\r\n          },\r\n          {\r\n            \"title\": \"Berinfak\",\r\n            \"description\": \"Infak pendidikan, infak kesehatan, dll\"\r\n          },\r\n          {\r\n            \"title\": \"Bantuan\",\r\n            \"description\": \"Klo masih bingung\"\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/sendList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"sendList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendButton",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"contact\": \"081381123456\",\r\n  \"message\": {\r\n    \"title\": \"Menu\",\r\n    \"content\": \"Selamat datang, silahkan klik tombol yang tersedia.\",\r\n    \"items\": [\r\n      {\r\n        \"body\": \"Tombol 1\"\r\n      },\r\n      {\r\n        \"body\": \"Tombol 2\"\r\n      }\r\n    ]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/sendButton",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"sendButton"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "archiveDeleteChat",
+			"item": [
+				{
+					"name": "archiveChat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5555/archiveChat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"archiveChat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "archiveChatByContact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"contact\": \"081381123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/archiveChat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"archiveChat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteChat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5555/deleteChat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"deleteChat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteChatByContact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"contact\": \"081381123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/deleteChat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"deleteChat"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "setStatus",
+			"item": [
+				{
+					"name": "setStatus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"test status\",\r\n  \"type\": \"text\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/setStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"setStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setStatusPlusImage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"test status plus gambar\",\r\n  \"type\": \"image\",\r\n  \"attachmentOrUrl\": \"C:\\\\Users\\\\Roedhi\\\\Pictures\\\\wastatus.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/setStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"setStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setStatusPlusImageFromUrl",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"test status gambar dari url\",\r\n  \"type\": \"url\",\r\n  \"attachmentOrUrl\": \"http://coding4ever.net/assets/images/avatar.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/setStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"setStatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "system",
+			"item": [
+				{
+					"name": "waNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5555/waNumber",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"waNumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "batteryStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5555/batteryStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"batteryStatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "groups",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unreadMessages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/unreadMessages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"unreadMessages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allMessagesByContact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5555/allMessagesByContact?contact=081381123456&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"allMessagesByContact"
+					],
+					"query": [
+						{
+							"key": "contact",
+							"value": "081381123456"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
