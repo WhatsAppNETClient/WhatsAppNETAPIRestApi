@@ -75,3 +75,5 @@ Setelah itu jalankan perintah berikut melalui command prompt (as administrator)
 * System
   - waNumber
   - batteryStatus
+  
+Contoh penggunaan api bisa Anda lihat di file postman (https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi/tree/master/postman)
