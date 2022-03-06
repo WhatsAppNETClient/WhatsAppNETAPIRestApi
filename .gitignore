@@ -10,6 +10,7 @@
 # User-specific folders
 bin/
 libs/
+docs/
 
 # User-specific files
 *.rsuser
